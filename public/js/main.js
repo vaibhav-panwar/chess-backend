@@ -13,6 +13,8 @@ let uid = String(Math.floor(Math.random() * 10000));
 let client;
 let channel;
 
+let x = false;
+
 let localStream;
 let remoteStream;
 let peerConnection;
@@ -39,13 +41,16 @@ let init = async () => {
 }
 
 let handleUserLeft = () => {
-    document.getElementById('user2').innerHTML = '';
+    document.getElementById('user2').style.display = 'none';
+    x = true;
 }
 
 let handleUserJoined = async (memberId) => {
     console.log('new user joined', memberId);
+    if(x){
+        document.getElementById('user2').style.display = 'block';
+    }
     createOffer(memberId)
-
 }
 
 let handleMessageFromPeer = async (message, memberId) => {
