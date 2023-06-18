@@ -44,7 +44,7 @@ let handleUserLeft = () => {
 
 let handleUserJoined = async (memberId) => {
     console.log('new user joined', memberId);
-
+    document.getElementById('user2').style.display = 'block';
     createOffer(memberId)
 
 }
