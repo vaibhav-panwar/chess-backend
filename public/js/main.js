@@ -39,12 +39,11 @@ let init = async () => {
 }
 
 let handleUserLeft = () => {
-    document.getElementById('user2').style.display = 'none';
+
 }
 
 let handleUserJoined = async (memberId) => {
     console.log('new user joined', memberId);
-    document.getElementById('user2').style.display = 'block';
     createOffer(memberId)
 
 }
