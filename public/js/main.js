@@ -47,10 +47,12 @@ let handleUserLeft = () => {
 
 let handleUserJoined = async (memberId) => {
     console.log('new user joined', memberId);
+    createOffer(memberId)
     if(x){
         document.getElementById('user2').style.display = 'block';
+        x = false;
     }
-    createOffer(memberId)
+    
 }
 
 let handleMessageFromPeer = async (message, memberId) => {
