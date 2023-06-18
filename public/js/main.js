@@ -39,7 +39,7 @@ let init = async () => {
 }
 
 let handleUserLeft = () => {
-
+    document.getElementById('user2').innerHTML = '';
 }
 
 let handleUserJoined = async (memberId) => {
